@@ -27,7 +27,7 @@ namespace KotopecApp.Windows
 
         private void BSave_Click(object sender, RoutedEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(TBFullName.Text))
+            if(string.IsNullOrWhiteSpace(TBName.Text) || string.IsNullOrWhiteSpace(TBSurname.Text))
             {
                 MessageBox.Show("Enter Full Name");
                 return;
@@ -55,7 +55,9 @@ namespace KotopecApp.Windows
             Model.User user = new Model.User();
             user.Login = TBLogin.Text;
             user.Password = TBPassword.Text;
-            user.FullName = TBFullName.Text;
+            user.Name = TBName.Text;
+            user.Surname = TBSurname.Text;
+            user.Patronymic = TBPatronymic.Text;
             if (MainWindow.db.User.FirstOrDefault(c=>c.Login == user.Login && c.Password == user.Password) != null)
             {
                 MessageBox.Show("Пользователь с таким логином уже существует");

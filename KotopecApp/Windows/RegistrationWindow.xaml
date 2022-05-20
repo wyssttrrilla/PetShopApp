@@ -8,8 +8,12 @@
         Title="RegistrationWindow" Height="398.263" Width="275" Background="AntiqueWhite">
     <Grid>
         <StackPanel>
-            <TextBlock Text="Full Name" TextAlignment="Center"/>
-            <TextBox x:Name="TBFullName" Margin="5"/>
+            <TextBlock Text="Name" TextAlignment="Center"/>
+            <TextBox x:Name="TBName" Margin="5"/>
+            <TextBlock Text="Surname" TextAlignment="Center"/>
+            <TextBox x:Name="TBSurname" Margin="5"/>
+            <TextBlock Text="Patronymic" TextAlignment="Center"/>
+            <TextBox x:Name="TBPatronymic" Margin="5"/>
             <TextBlock Text="Login" TextAlignment="Center"/>
             <TextBox x:Name="TBLogin" Margin="5"/>
             <TextBlock Text="Password" TextAlignment="Center"/>
